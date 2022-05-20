@@ -1,4 +1,4 @@
-// 'use strict';
+'use strict';
 
 /* function calcAge(birthyear) {
   const age = 2022 - birthyear;
@@ -35,7 +35,7 @@ const firstName = 'Tako';
 calcAge(1997);
  */
 
-//  Hoisting
+/* //  Hoisting
 
 // variables
 console.log(me);
@@ -76,3 +76,32 @@ let y = 2;
 const z = 3;
 
 console.log(x === window.x);
+ */
+
+// The This keyword in practise
+
+console.log(this);
+
+const calcAge = function (birthyear) {
+  console.log(2022 - birthyear);
+  console.log(this); // will not work with strict mode
+};
+
+calcAge(1997);
+
+const calcAgeArrow = birthyear => {
+  console.log(2022 - birthyear);
+  console.log(this);
+};
+
+calcAgeArrow(1996);
+
+const tako = {
+  year: 1997,
+  calcAge: function () {
+    console.log(this);
+    console.log(2022 - this.year);
+  },
+};
+
+tako.calcAge();
