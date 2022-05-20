@@ -80,18 +80,18 @@ console.log(x === window.x);
 
 // The This keyword in practise
 
-console.log(this);
+// console.log(this);
 
 const calcAge = function (birthyear) {
   console.log(2022 - birthyear);
-  console.log(this); // will not work with strict mode
+  //   console.log(this); // will not work with strict mode
 };
 
 calcAge(1997);
 
 const calcAgeArrow = birthyear => {
   console.log(2022 - birthyear);
-  console.log(this);
+  //   console.log(this);
 };
 
 calcAgeArrow(1996);
@@ -105,3 +105,15 @@ const tako = {
 };
 
 tako.calcAge();
+
+// example
+
+const matilda = {
+  year: 2017,
+};
+
+matilda.calcAge = tako.calcAge; // method borrowing / copying method
+matilda.calcAge();
+
+const f = tako.calcAge;
+f();
