@@ -81,7 +81,7 @@ console.log(x === window.x);
 // The This keyword in practise
 
 // console.log(this);
-
+/* 
 const calcAge = function (birthyear) {
   console.log(2022 - birthyear);
   //   console.log(this); // will not work with strict mode
@@ -117,3 +117,16 @@ matilda.calcAge();
 
 const f = tako.calcAge;
 f();
+ */
+
+const tako = {
+  firstName: 'Tako',
+  year: 1997,
+  calcAge: function () {
+    console.log(this);
+    console.log(2022 - this.year);
+  },
+
+  greet: () => console.log(`Hey ${this.firstName}`),
+};
+tako.greet();
