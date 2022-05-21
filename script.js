@@ -119,14 +119,25 @@ const f = tako.calcAge;
 f();
  */
 
+// var firstName = 'Matilda';
+
 const tako = {
   firstName: 'Tako',
   year: 1997,
   calcAge: function () {
     console.log(this);
     console.log(2022 - this.year);
+
+    const isMillenial = function () {
+      console.log(this.year >= 1981 && this.year <= 1997);
+    };
+    isMillenial();
   },
 
-  greet: () => console.log(`Hey ${this.firstName}`),
+  greet: () => {
+    console.log(this);
+    console.log(`Hey ${this.firstName}`);
+  },
 };
 tako.greet();
+tako.calcAge();
