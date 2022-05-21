@@ -128,7 +128,16 @@ const tako = {
     console.log(this);
     console.log(2022 - this.year);
 
+    /* // Solution 1
+    const self = this; // self or that
     const isMillenial = function () {
+      console.log(self.year >= 1981 && self.year <= 1997);
+    };
+    // console.log(this.year >= 1981 && this.year <= 1997);
+    // }; */
+
+    // Solution 2
+    const isMillenial = () => {
       console.log(this.year >= 1981 && this.year <= 1997);
     };
     isMillenial();
