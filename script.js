@@ -154,7 +154,7 @@ tako.calcAge();
 
 /* Primitives vs Objects */
 
-let age = 30;
+/* let age = 30;
 let oldAge = age;
 age = 31;
 console.log(age);
@@ -169,3 +169,35 @@ const friend = me;
 friend.age = 27;
 console.log('Friend:', friend);
 console.log('me', me);
+ */
+
+//Primitaive Types
+let lastName = 'Williams';
+let oldLastName = lastName;
+lastName = 'Davis';
+console.log(lastName);
+console.log(oldLastName);
+
+// Reference types
+const jessica = {
+  firstName: 'Jessica',
+  lastName: 'Williams',
+  age: 27,
+  family: ['Alice', 'Bob'],
+};
+const marriedJessica = jessica;
+marriedJessica.lastName = 'Davis';
+console.log('Before marriage', jessica);
+console.log('after marriage', marriedJessica);
+
+//Copying objects
+const jessica2 = {
+  firstName: 'Jessica',
+  lastName: 'Williams',
+  age: 27,
+};
+
+const jessicaCopy = Object.assign({}, jessica2);
+jessicaCopy.lastName = 'Davis';
+console.log('Before marriage', jessica2);
+console.log('after marriage', jessicaCopy);
