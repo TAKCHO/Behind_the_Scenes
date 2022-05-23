@@ -121,7 +121,7 @@ f();
 
 // var firstName = 'Matilda';
 
-const tako = {
+/* const tako = {
   firstName: 'Tako',
   year: 1997,
   calcAge: function () {
@@ -136,7 +136,7 @@ const tako = {
     // console.log(this.year >= 1981 && this.year <= 1997);
     // }; */
 
-    // Solution 2
+/*     // Solution 2
     const isMillenial = () => {
       console.log(this.year >= 1981 && this.year <= 1997);
     };
@@ -150,3 +150,22 @@ const tako = {
 };
 tako.greet();
 tako.calcAge();
+ */
+
+/* Primitives vs Objects */
+
+let age = 30;
+let oldAge = age;
+age = 31;
+console.log(age);
+console.log(oldAge);
+
+const me = {
+  name: 'tako',
+  age: 25,
+};
+
+const friend = me;
+friend.age = 27;
+console.log('Friend:', friend);
+console.log('me', me);
